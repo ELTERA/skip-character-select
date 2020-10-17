@@ -20,7 +20,8 @@ function saveJsonData(pathToFile, data) {
 module.exports = function SkipCharacterSelect(dispatch) {	
     /*
         Let character select screen and client account settings to finish loading. May need to be adjusted for your CPU/HDD/SSD.
-        No delay works but sometimes the "wind sound effect" from the "warping loading screen" will continue to play afterwards if you switch servers.
+        No delay works but sometimes the "wind sound effect" will continue to play or some screen artefacts appears.
+	You can tune it to match your PC performace.
     */
     const delay = 8000; 
 
