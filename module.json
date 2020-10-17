@@ -1,0 +1,11 @@
+{
+  "disableAutoUpdate": false,
+  "name": "skip-character-select",
+  "options": {
+    "niceName": "SCS",
+    "guiName": "Skip Character Selection"
+  },
+  "author": "Teralove/EL",
+  "description": "Automatically login to last played character.",
+  "servers": ["https://raw.githubusercontent.com/ELTERA/skip-character-select/master/"]
+}

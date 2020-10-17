@@ -18,17 +18,16 @@ function saveJsonData(pathToFile, data) {
 }
 
 module.exports = function SkipCharacterSelect(dispatch) {	
-
     /*
-        Let character select screen and client account settings to finish loading. May need to be adjusted for your CPU.
+        Let character select screen and client account settings to finish loading. May need to be adjusted for your CPU/HDD/SSD.
         No delay works but sometimes the "wind sound effect" from the "warping loading screen" will continue to play afterwards if you switch servers.
     */
     const delay = 8000; 
 
-    let settingsPath;
+    let settingsPath,
     enabled = true;
             
-    dispatch.hook('S_LOGIN_ACCOUNT_INFO', 1, (event) => {
+    dispatch.hook('S_LOGIN_ACCOUNT_INFO', 2, (event) => {
         settingsPath = `./data/${event.serverName}.json`;
         if (!enabled) return;
         
