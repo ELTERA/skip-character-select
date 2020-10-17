@@ -45,14 +45,14 @@ module.exports = function SkipCharacterSelect(dispatch) {
         saveJsonData(settingsPath, Object.assign({}, event));
     });
 
-	// Instant game exit
-	dispatch.hook('S_PREPARE_EXIT', 1, (event) => {
-		dispatch.toClient('S_EXIT', 3, { category: 0, code: 0 });
-	});
+    // Instant game exit
+    dispatch.hook('S_PREPARE_EXIT', 1, (event) => {
+        dispatch.toClient('S_EXIT', 3, {});
+    });
 	
-	// Instant character selection screen
-	dispatch.hook('S_PREPARE_RETURN_TO_LOBBY', 1, (event) => {
-		dispatch.toClient('S_RETURN_TO_LOBBY', 1, {});
-	});
+    // Instant character selection screen
+    dispatch.hook('S_PREPARE_RETURN_TO_LOBBY', 1, (event) => {
+        dispatch.toClient('S_RETURN_TO_LOBBY', 1, {});
+    });
     
 }
