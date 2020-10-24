@@ -49,10 +49,5 @@ module.exports = function SkipCharacterSelect(dispatch) {
     dispatch.hook('S_PREPARE_EXIT', 1, (event) => {
         dispatch.toClient('S_EXIT', 3, {});
     });
-	
-    // Instant character selection screen
-    dispatch.hook('S_PREPARE_RETURN_TO_LOBBY', 1, (event) => {
-        dispatch.toClient('S_RETURN_TO_LOBBY', 1, {});
-    });
     
 }
